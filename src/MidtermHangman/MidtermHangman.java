@@ -57,10 +57,13 @@ public class MidtermHangman {
 	            	wordIsRight = true;
 	                break;
 	        }
-	        } while (! wordIsRight);
-		System.out.println("\nThe word is " + Words[randomIdx] +
-	            " You missed " + (attempts - findEmptyPosition.findEmptyPosition(enteredLetters)) +
+	        } while ((! wordIsRight) && (attempts <= 7));
+		System.out.println("You have lost");
+		
+		System.out.println("\nThe word is " + Gameword);
+	     System.out.println (" You missed " + (attempts - findEmptyPosition.findEmptyPosition(enteredLetters)) +
 	            " time(s)");
+		
 	}
 
 	
