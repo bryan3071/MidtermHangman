@@ -12,7 +12,7 @@ public class printWord {
 		for (int i = 0; i < word.length(); i++) {
 			char letter = word.charAt(i);
 			// check for already entered letters from user.
-			if (inEnteredLetters(letter, enteredLetters))
+			if (inEnteredletter.inEnteredLetters(letter, enteredLetters))
 				System.out.print(letter); // If yes - print it
 			else {
 				System.out.print('_');
@@ -24,8 +24,4 @@ public class printWord {
 
 	}
 
-	private static boolean inEnteredLetters(char letter, char[] enteredLetters) {
-		// TODO Auto-generated method stub
-		return new String(enteredLetters).contains(String.valueOf(letter));
-	}
 }
