@@ -19,9 +19,13 @@ public class printWord {
 				underscorePrinted = true;
 			}
 
-			return underscorePrinted;
-
 		}
+		return underscorePrinted;
 
+	}
+
+	private static boolean inEnteredLetters(char letter, char[] enteredLetters) {
+		// TODO Auto-generated method stub
+		return new String(enteredLetters).contains(String.valueOf(letter));
 	}
 }
