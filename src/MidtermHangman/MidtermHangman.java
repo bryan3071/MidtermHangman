@@ -19,7 +19,11 @@ public class MidtermHangman {
 		//Handles the generation of 
 		Random random = new Random();
 		int randomIdx = random.nextInt(Words.length);
-		System.out.println(Words[randomIdx]);
+		//System.out.println(Words[randomIdx]);
+		String Gameword = (Words[randomIdx]);
+		//Will remove sysout for Gameword before player plays
+		System.out.println(Gameword);
+		
 		
 		// creates array that holds selected characters
 		//char[] lettersSelected = new char[Words[randomWordNumber].length()];
