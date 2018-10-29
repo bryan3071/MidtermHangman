@@ -13,14 +13,16 @@ public class MidtermHangman {
 		
 		
 		// Creates array of 10 different strings hard coded
-		String[] Words = {"Encapsulation", "Polymorphism", "Class", "Inheritance", "Superclass", "Subclass",
-				"Abstraction", "Extends", "Method", "Object"};
+		String[] Words = {"encapsulation", "polymorphism", "class", "inheritance", "superclass", "subclass",
+				"abstraction", "extends", "method", "object"};
 		
 		//Handles the generation of 
 		Random random = new Random();
 		int randomIdx = random.nextInt(Words.length);
 		//System.out.println(Words[randomIdx]);
 		String Gameword = (Words[randomIdx]);
+		// Hello is just in place for testing
+		Gameword = "hello";
 		//Will remove sysout for Gameword before player plays
 		System.out.println(Gameword);
 		
