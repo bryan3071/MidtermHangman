@@ -15,7 +15,6 @@ public class MidtermHangman {
 		System.out.println("Welcome to a friendly game of hangman");
 
 		// Creates array of 10 different strings hard coded
-
 		// Handles the generation of
 
 		String[] Words = { "encapsulation", "polymorphism", "class", "inheritance", "superclass", "subclass",
@@ -39,13 +38,13 @@ public class MidtermHangman {
 		System.out.println(Gameword);
 
 		// creates array that holds selected characters
-		// char[] lettersSelected = new char[Words[randomWordNumber].length()];
+		char[] enteredLetters = new char[Gameword.length()];
 
 		do {
 	        // infinitely iterate through cycle as long as enterLetter returns true
 	        // if enterLetter returns false that means user guessed all the letters
 	        // in the word e. g. no asterisks were printed by printWord
-	        switch (enterLetter(Words[randomIdx], enteredLetters)) {
+	        switch (enterLetter.enterLetter(Gameword, enteredLetters)) {
 	            case 0:
 	                attempts++;
 	                break;
@@ -60,5 +59,7 @@ public class MidtermHangman {
 	        }
 	        } while (! wordIsRight);
 	}
+
+	
 
 }
