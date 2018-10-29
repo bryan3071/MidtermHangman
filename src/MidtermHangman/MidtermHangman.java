@@ -11,7 +11,7 @@ public class MidtermHangman {
 
 		int attempts = 0;
 		boolean wordIsRight = false;
-		
+
 		System.out.println("Welcome to a friendly game of hangman");
 
 		// Creates array of 10 different strings hard coded
@@ -19,8 +19,6 @@ public class MidtermHangman {
 
 		String[] Words = { "encapsulation", "polymorphism", "class", "inheritance", "superclass", "subclass",
 				"abstraction", "extends", "method", "object" };
-		
-		
 
 		// Handles the generation of
 
@@ -32,7 +30,7 @@ public class MidtermHangman {
 		// Will remove sysout for Gameword before player plays
 
 		// Hello is just in place for testing
-		Gameword = "hello";
+     	Gameword = "hello";
 		// Will remove sysout for Gameword before player plays
 
 		System.out.println(Gameword);
@@ -41,28 +39,25 @@ public class MidtermHangman {
 		char[] enteredLetters = new char[Gameword.length()];
 
 		do {
-	        // infinitely iterate through cycle as long as enterLetter returns true
-	        // if enterLetter returns false that means user guessed all the letters
-	        // in the word e. g. no asterisks were printed by printWord
-	        switch (enterLetter.enterLetter(Gameword, enteredLetters)) {
-	            case 0:
-	                attempts++;
-	                break;
-	            case 1:
-	                attempts++;
-	                break;
-	            case 2:
-	                break;
-	            case 3:
-	            	wordIsRight = true;
-	                break;
-	        }
-	        } while (! wordIsRight);
-		System.out.println("\nThe word is " + Words[randomIdx] +
-	            " You missed " + (attempts - findEmptyPosition.findEmptyPosition(enteredLetters)) +
-	            " time(s)");
+			// infinitely iterate through cycle as long as enterLetter returns true
+			// if enterLetter returns false that means user guessed all the letters
+			// in the word e. g. no asterisks were printed by printWord
+			switch (enterLetter.enterLetter(Gameword, enteredLetters)) {
+			case 0:
+				attempts++;
+				break;
+			case 1:
+				attempts++;
+				break;
+			case 2:
+				break;
+			case 3:
+				wordIsRight = true;
+				break;
+			}
+		} while (!wordIsRight);
+		System.out.println("\nThe word is " + Words[randomIdx] + " You missed "
+				+ (attempts - findEmptyPosition.findEmptyPosition(enteredLetters)) + " time(s)");
 	}
-
-	
 
 }
