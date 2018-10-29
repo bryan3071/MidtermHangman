@@ -58,6 +58,9 @@ public class MidtermHangman {
 	                break;
 	        }
 	        } while (! wordIsRight);
+		System.out.println("\nThe word is " + Words[randomIdx] +
+	            " You missed " + (attempts - findEmptyPosition.findEmptyPosition(enteredLetters)) +
+	            " time(s)");
 	}
 
 	
