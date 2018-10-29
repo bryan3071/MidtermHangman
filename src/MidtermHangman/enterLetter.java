@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class enterLetter {
 
-	public static int enterLetter(String word, char[] enteredLetters) {
+	public static int enterLetter(String word, char[] enteredLetters, int miss) {
 		System.out.print("(Guess) Enter a letter in word ");
 		// If-clause is true if no asterisks were printed so
 		// word is successfully guessed
@@ -21,7 +21,8 @@ public class enterLetter {
 			enteredLetters[emptyPosition] = userInput;
 			return 1;
 		} else {
-			System.out.println(userInput + " is not in the word");
+			miss++;
+			System.out.println(userInput + " is not in the word. Misses = " + miss);
 			return 0;
 		}
 	}

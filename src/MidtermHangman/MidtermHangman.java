@@ -42,7 +42,7 @@ public class MidtermHangman {
 			// infinitely iterate through cycle as long as enterLetter returns true
 			// if enterLetter returns false that means user guessed all the letters
 			// in the word e. g. no asterisks were printed by printWord
-			switch (enterLetter.enterLetter(Gameword, enteredLetters)) {
+			switch (enterLetter.enterLetter(Gameword, enteredLetters, attempts)) {
 			case 0:
 				attempts++;
 				break;
