@@ -20,9 +20,12 @@ public class enterLetter {
 		} else if (word.contains(String.valueOf(userInput))) {
 			enteredLetters[emptyPosition] = userInput;
 			return 1;
+		
+			
+			
 		} else {
-			miss++;
-			System.out.println(userInput + " is not in the word. Misses = " + miss);
+			//miss++;
+			System.out.println(userInput + " is not in the word. Misses = " + (miss));
 			return 0;
 		}
 	}

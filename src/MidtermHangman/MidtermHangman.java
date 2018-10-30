@@ -12,29 +12,21 @@ public class MidtermHangman {
 		int attempts = 0;
 		boolean wordIsRight = false;
 
-		System.out.println("Welcome to a friendly game of hangman");
+		System.out.println("Welcome to a friendly game of Hangman");
 
 		// Creates array of 10 different strings hard coded
-		// Handles the generation of
+		
 
 		String[] Words = { "encapsulation", "polymorphism", "class", "inheritance", "superclass", "subclass",
 				"abstraction", "extends", "method", "object" };
 
-		// Handles the generation of
+		// Handles the generation of the random value
 
 		Random random = new Random();
 		int randomIdx = random.nextInt(Words.length);
-		// System.out.println(Words[randomIdx]);
 		String Gameword = (Words[randomIdx]);
 
-		// Will remove sysout for Gameword before player plays
-
-		// Hello is just in place for testing
-     	Gameword = "hello";
-		// Will remove sysout for Gameword before player plays
-
-		System.out.println(Gameword);
-
+		
 		// creates array that holds selected characters
 		char[] enteredLetters = new char[Gameword.length()];
 
@@ -43,14 +35,19 @@ public class MidtermHangman {
 			// if enterLetter returns false that means user guessed all the letters
 			// in the word e. g. no asterisks were printed by printWord
 			switch (enterLetter.enterLetter(Gameword, enteredLetters, attempts)) {
+			// missed letter
 			case 0:
 				attempts++;
 				break;
+			//correct letter
 			case 1:
 				attempts++;
 				break;
+			// if a character is repeated
 			case 2:
 				break;
+			//Print word with underscore for hidden letters, returns true if underscores
+				//were printed, otherwise return false
 			case 3:
 				wordIsRight = true;
 				break;
@@ -58,6 +55,7 @@ public class MidtermHangman {
 		} while (!wordIsRight);
 		System.out.println("\nThe word is " +  Gameword + " You missed "
 				+ (attempts - findEmptyPosition.findEmptyPosition(enteredLetters)) + " time(s)");
+
 	}
 
 }
